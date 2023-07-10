@@ -67,7 +67,7 @@ jobs:
     - name: Run tox targets for Python ${{ matrix.python-version }}
       if: ${{ matrix.toxenv == 'PyPy' }}
       continue-on-error: ${{ matrix.experimental }}
-      run: tox -e pypy3-django22,pypy3-django32
+      run: tox -e pypy3-django22,pypy3-django32,pypy3-django42
 
     - name: Upload coverage data to coveralls.io
       env:
